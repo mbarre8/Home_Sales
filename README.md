@@ -1,1 +1,4 @@
 # Home_Sales
+
+In the following challenge I used pyspark sql to analyze home sales data that is in an AWS S3 bucket. Once I showed the data in a dataframe I created an empty table called "home_sales". From here I run a few spark sql functions to compare when a house was sold, and average price and when a house was built and average price based on the criterias like number of bedrooms, number of bathrooms, square living space and number how levels in a home. 
+Next, we cached the table created above and compare run times for the same query when cached vs uncached. And when the table was cached it ran quicker. From here I partition the data by the date_built column and read and create a table from the parquet formatted data. From here I ran the same query and it was a longer run time than the cached and uncached queries. Maybe if data was partitioned on a different column we would see shorter run times for the query using the parquet formatted data.
